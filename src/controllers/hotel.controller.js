@@ -4,7 +4,7 @@ const Room = require("../models/room.model");
 
 const router = express.Router();
 
-router.post("", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const hotel = await Hotel.create(req.body);
     return res.status(201).send(hotel);
